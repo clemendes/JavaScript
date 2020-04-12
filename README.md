@@ -1,2 +1,2 @@
 # JavaScript
-Python language study repository
+JavaScript language study repository
