@@ -237,3 +237,115 @@ var Elevator = {
 		console.log('Andar: ', this.floor);
 	}
 };
+
+/* // -----------------------------------------------------
+// ----------- EXERCICIO SEGUNDO MAIOR -----------------
+// -----------------------------------------------------
+//Se preparando para ler dados da entrada padrão
+const stdin = process.openStdin(); 
+
+//Lendo dados
+stdin.addListener('data', text => {
+  const textoLido = text.toString().trim().split('\n').map(s => s.trim());
+  
+  stdin.pause(); // stop reading
+  
+  main(textoLido);
+});
+
+function segundoMaior(numeros)
+{
+    let maior = numeros[0];
+    let segMaior = numeros[0];
+    for(let num of numeros)
+    {
+        if(num > maior){
+            segMaior = maior;
+            maior = num;
+        }
+        else if(num > segMaior && num != maior)
+            segMaior = num;
+    }
+    return segMaior;
+}
+
+function main(linhas)
+{   
+    for(let valores of linhas){
+        console.log(segundoMaior(valores.split(' ').map(Number)));
+    }
+}
+// -----------------------------------------------------
+// ------- EXERCICIO FUNCAO CRIA OBJETO MAIOR ----------
+// -----------------------------------------------------
+//Se preparando para ler dados da entrada padrão
+const stdin = process.openStdin(); 
+
+//Lendo dados
+stdin.addListener('data', text => {
+  const textoLido = text.toString().trim().split('\n').map(s => Number(s));
+  
+  stdin.pause(); // stop reading
+  
+  main(textoLido);
+});
+
+function meuObjeto(a, b)
+{
+  let meuObjeto = {
+    largura: a,
+    comprimento: b,
+    perimetro: 2*(a+b),
+    area: a*b,
+  }
+  return meuObjeto 
+}
+
+function main(valores)
+{   
+    let obj = meuObjeto(valores[0], valores[1]);
+    console.log(obj.largura);
+    console.log(obj.comprimento);
+    console.log(obj.perimetro);
+    console.log(obj.area);
+}
+// ----------------------------------------------------- */
+
+// NUMBER - PROPR. E METODOS
+console.log('---------------------------------------- ');
+console.log('TRABALHANDO COM NUMEROS - PROPRIEDADES E METODOS:');
+console.log('Number.IsInteger(x): ', Number.isInteger(x));
+console.log('Number.IsNaN(x): ', Number.isNaN(x));
+console.log('Função Global IsNaN("Hello"): ', isNaN('Hello'));
+// TOFIXED() - CASAS DECIMAIS
+console.log('x.toFixed(2): ', x.toFixed(2));
+
+// MATH
+console.log('---------------------------------------- ');
+console.log('MATH:');
+console.log('Potencia 2^3: = ', Math.pow(2,3));
+console.log('Raiz Quadrada 25 = ', Math.sqrt(25));
+console.log('Absoluto de -100: ', Math.abs(-100));
+console.log('Arredonda para Cima (5.1) = ', Math.ceil(5.1));
+console.log('Arredonda para Baixo (7.8) = ', Math.floor(7.8));
+console.log('Arredonda para Inteiro +Proximo (7.6):  = ', Math.round(7.6));
+console.log('Retornar parte Inteira do Numero (15.4):  = ', Math.trunc(15.4));
+console.log('Máximo (22,10,15,32,44,60,8,16):  = ', Math.max(22,10,15,32,44,60,8,16));
+console.log('Mínimo (22,10,15,32,44,60,8,16):  = ', Math.min(22,10,15,32,44,60,8,16));
+console.log('Aleatório entre 0 até 1:  = ', Math.random());
+console.log('Aleatório entre 0 até 100:  = ', Math.random()*100);
+console.log('Aleatório entre 1 até 100 (só Inteiros):  = ', Math.trunc((Math.random()*100)+1));
+
+// FUNCAO DE EXEMPLO P/ PRÁTICA-> MENSAGEM ALEATORIA
+console.log('---------------------------------------- ');
+function mensagem_aleatoria() {
+	var number = Math.trunc((Math.random()*5)+1);
+	switch(number){
+		case 1: console.log('Mensagem aleatória 1: Olá tudo bem?'); break;
+		case 2: console.log('Mensagem aleatória 2: Em algum momento, já disse "Olá tudo bem?"'); break;
+		case 3: console.log('Mensagem aleatória 3: Olá tudo bem.... de novo?'); break;
+		case 4: console.log('Mensagem aleatória 4: To ficando cansado já...'); break;
+		case 5: console.log('Mensagem aleatória 5: Vai dormir cara...'); break;
+	}
+};
+mensagem_aleatoria();
