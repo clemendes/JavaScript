@@ -160,5 +160,80 @@ JSON;
 var myObj = { a:1, b:2, };
 var json_string = JSON.stringify(myObj);
 console.log('---------------------------------------- ');
-console.log('Conversão de Objeto em JSON string (JSON.stringify):');
+console.log('Conversão de Objeto em JSON string -> JSON.stringify():');
 console.log(json_string);
+// CONVERTER STRING EM JSON (PARSE)
+console.log('Conversão de JSON String Objeto -> JSON.parse():');
+meuObj = JSON.parse(json_string);
+console.log(meuObj);
+
+// ATRIBUIÇÃO MULTIPLA (POS. ARRAY -> variáveis)
+var myArr = [1,2,3];
+var [aa, bb, cc] = myArr;
+
+// ATRIBUIÇÃO MULTIPLA (PROPRIEDADES OBJETO -> variáveis)
+var Obj = { d: 5,	e: 10, f: 15 };
+var {d, e, f} = Obj;
+
+// SPREAD -> ... -> PREENCHENDO PARAMETROS P/ FUNÇÃO
+console.log('---------------------------------------- ');
+var array1 = [5,20,2,4,9];
+function soma5(n1,n2,n3,n4,n5) {
+	return n1 + n2 + n3 + n4 + n5;
+};
+console.log('Soma Utilizando Spread ->  soma5(...array1) : ', soma5(...array1));
+// OUTRA FORMA DE UTILIZAR SPREAD ... ABRIR ARRAYS EM OUTRO
+var array2 = [10,11,12];
+var array3 = [...array1, ...array2]
+
+// FOR IN - EXEMPLO ARRAY
+console.log('---------------------------------------- ');
+console.log('FOR IN() - EXEMPLO EM ARRAY:');
+for (let a in array1) {
+	console.log(a);
+};
+// FOR IN - EXEMPLO OBJETO
+console.log('---------------------------------------- ');
+console.log('FOR IN() - EXEMPLO EM OBJETO:');
+for (let a in pessoaConstructorManual) {
+	console.log(a);
+};
+
+// FOR OF - EXEMPLO ARRAY
+console.log('---------------------------------------- ');
+console.log('FOR OF() - EXEMPLO EM ARRAY:');
+for (let a of array1) {
+	console.log(a);
+};
+
+// FUNCAO DE EXEMPLO P/ PRÁTICA-> MINIMO -> MENOR NUMERO
+function min(numbers) {
+	var min = numbers[0]
+	for (var i=0;i< numbers.length;i++){
+		if (numbers[i] < min){
+			min = numbers[i];
+		}
+	}
+	return min;
+};
+
+// FUNCAO DE EXEMPLO P/ PRÁTICA-> ELEVATOR -> SIMULA ELEVADOR
+var Elevator = {
+	floor: 0,
+	total: 3,
+	up(){
+		if (this.floor < this.total) {
+			this.floor++;
+		}
+		this.print();
+	},
+	down(){
+		if (this.floor > 0) {
+			this.floor--;
+		}
+		this.print();
+	},
+	print() {
+		console.log('Andar: ', this.floor);
+	}
+};
