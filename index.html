@@ -19,7 +19,8 @@
 		<!-- ESTRUTURA DA PÁGINA -->
 		<header>
      		<h1>Título da página</h1>
-     		<h2>Subtítulo da página</h2>
+			<h3>Digite um texto para inserir na lista (Enter)</h3>
+			<input type="text" onkeyup="insert(event)" />
      		<nav>
 				<ul>       
 			 		<li><a href=”#”>Página 1</a></li>
@@ -31,17 +32,29 @@
 		</header>
 
 		<section>
-		    <h3>Seção 1</h3>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
+			<h3>Seção 1</h3>			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
 		</section>
 
 		<main>
 	  		<h2>Main</h2>
 	  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
-	  		<article>
-	     		<h3>Subtítulo</h3>
-	        	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
-	   		</article>
+			<!-- MANIPULANDO HTML COM JAVASCRIPT -->
+			<h3>Manipulação com JavaScript</h3>
+			<div></div>
+			<input type="text" id="myInput" />
+			<input type="text" id="myInput3" />
+			<button>Clique Aqui!</button>
+			<ul>
+				<li class="list-item" >Item 1</li>
+				<li class="list-item" >Item 2</li>
+				<li class="list-item" >Item 3</li>
+			</ul>
+			<h2>Formulário</h2>
+			<form name="myForm" action="/abc" method="post" onsubmit="return submitForm()">
+				<input type="text" name="message"/>
+				<button type="submit">Enviar</button>
+			</form>
 		</main>
 
 		<footer>
